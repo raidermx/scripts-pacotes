@@ -102,6 +102,7 @@ echo "deb http://deb.anydesk.com/ all main" | sudo tee /etc/apt/sources.list.d/a
 sudo apt update && sudo apt install anydesk
 sudo apt install synaptic
 
+sudo apt install git neovim vim vim-gtk3 aptitude neofetch cmatrix aria2 tmux tmate ncal ccal gcal calc  links2 debsums deborphan htop hdparm vim timeshift akira gimp inkscape blender scribus krita krita-l10n kodi vlc flameshot darktable digikam mypaint kolourpaint rawtherapee librecad freecad leocad solvespace synfigstudio openscad pencil2d octave scilab kruler ardour audacious kdenlive lmms mixxx musescore clementine ark  filezilla qbittorrent uget tlp tlp-rdw  cheese guvcview handbrake hydrogen mpv pitivi qtractor smplayer k3b brasero bluefish codeblocks emacs geany minder scratch carmetal geogebra kicad electric stellarium gnucash gnumeric calibre planner dia gedit cherrytree seahorse keepassxc 
 
 
 
