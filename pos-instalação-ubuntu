@@ -1,18 +1,30 @@
 apt update
 apt upgrade
 sudo apt install apturl apturl-common
+sudo apt install build-essential dkms
+
 sudo apt install gnome-software
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
 sudo apt install gnome-tweaks
+
 apt install ufw gufw
 sudo ufw enable
+
 sudo nano /etc/sysctl.conf
 vm.swappiness=10
+vm.vfs_cache_pressure=50
+vm.dirty_background_bytes=16777216 
+vm.dirty_bytes=50331648 
+
+
+
 sudo apt install tlp tlp-rdw
 sudo systemctl enable tlp.service && sudo tlp start
+
 sudo apt install flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 sudo apt install gnome-software-plugin-flatpak
+
 sudo apt install ubuntu-restricted-extras
 sudo apt install audacious libqt6svg6
 sudo apt install vlc
@@ -28,6 +40,25 @@ sudo apt install kdenlive
 sudo apt install krita krita-l10n
 sudo apt install obs-studio
 sudo apt install openshot-qt
+sudo apt install rawtherapee
+sudo apt install digikam
+sudo apt install darktable
+sudo apt install shotcut
+sudo apt install mpv
+
+sudo apt install faad ffmpeg gstreamer1.0-libav gstreamer1.0-vaapi gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly lame libavcodec-extra libavcodec-extra59 libavdevice59 libgstreamer1.0-0 sox twolame vorbis-tools
+sudo apt install ttf-mscorefonts-installer
+sudo apt install fonts-hack-ttf 
+sudo apt install glib2-devel ImageMagick
+sudo apt install materia-gtk-theme deepin-icon-theme paper-icon-theme 
+sudo apt install libreoffice-l10n-pt-br libreoffice-style-breeze libreoffice-style-colibre libreoffice-style-elementary libreoffice-style-hicontrast libreoffice-style-sifr 
+
+sudo apt install librecad
+sudo apt install leocad
+
+sudo add-apt-repository ppa:freecad-maintainers/freecad-stable
+sudo apt update
+sudo apt install freecad freecad-doc
 
 cd /tmp && wget -O discord.deb 'https://discord.com/api/download?platform=linux&format=deb'
 sudo apt install ./discord.deb && cd $HOME
