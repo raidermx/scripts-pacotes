@@ -1,0 +1,95 @@
+apt update
+apt upgrade
+sudo apt install apturl apturl-common
+sudo apt install gnome-software
+gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
+sudo apt install gnome-tweaks
+apt install ufw gufw
+sudo ufw enable
+sudo nano /etc/sysctl.conf
+vm.swappiness=10
+sudo apt install tlp tlp-rdw
+sudo systemctl enable tlp.service && sudo tlp start
+sudo apt install flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+sudo apt install gnome-software-plugin-flatpak
+sudo apt install ubuntu-restricted-extras
+sudo apt install audacious libqt6svg6
+sudo apt install vlc
+sudo apt install smplayer
+sudo apt install kodi
+sudo snap install spotify
+sudo apt install audacity
+sudo apt install blender
+sudo apt install gimp
+sudo apt install handbrake
+sudo apt install inkscape
+sudo apt install kdenlive
+sudo apt install krita krita-l10n
+sudo apt install obs-studio
+sudo apt install openshot-qt
+
+cd /tmp && wget -O discord.deb 'https://discord.com/api/download?platform=linux&format=deb'
+sudo apt install ./discord.deb && cd $HOME
+
+snap install telegram-desktop
+
+cd /tmp && wget -O google-chrome-stable.deb 'https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb'
+sudo apt install ./google-chrome-stable.deb && cd $HOME
+
+echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge/ stable main" | sudo tee /etc/apt/sources.list.d/microsoft-edge.list
+sudo apt install curl
+cd /tmp && curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg && sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/ && cd $HOME
+sudo apt update && sudo apt install microsoft-edge-stable
+
+sudo apt install steam
+sudo apt install lutris
+
+flatpak install flathub org.DolphinEmu.dolphin-emu
+flatpak install flathub io.github.lime3ds.Lime3DS
+flatpak install flathub org.flycast.Flycast
+flatpak install flathub net.pcsx2.PCSX2
+flatpak install flathub net.rpcs3.RPCS3
+flatpak install flathub com.snes9x.Snes9x
+flatpak install flathub io.mgba.mGBA
+flatpak install flathub app.xemu.xemu
+flatpak install flathub org.ryujinx.Ryujinx
+
+
+sudo apt install arc arj cabextract lhasa p7zip p7zip-full p7zip-rar rar unrar unace unzip xz-utils zip
+sudo apt install gdebi
+sudo apt install stacer
+flatpak install flathub io.github.flattool.Warehouse
+
+
+sudo apt install uget
+sudo apt install qbittorrent
+sudo apt install gparted
+
+cd /tmp && wget -qO- https://keys.anydesk.com/repos/DEB-GPG-KEY | sudo gpg --dearmour -o /etc/apt/trusted.gpg.d/anydesk.gpg && cd $HOME
+echo "deb http://deb.anydesk.com/ all main" | sudo tee /etc/apt/sources.list.d/anydesk-stable.list
+sudo apt update && sudo apt install anydesk
+sudo apt install synaptic
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
