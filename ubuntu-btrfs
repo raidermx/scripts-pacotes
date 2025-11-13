@@ -1,0 +1,129 @@
+Ubuntu + Btrfs + Automatic Snapshots
+This script creates Btrfs subvolumes (while still in Live CD/USB mode) for Ubuntu 24.04 (or newer) and compatible derivatives.
+
+What the Script Does
+Creates Btrfs subvolumes:
+@home @log @cache @tmp @libvirt @flatpak @docker @containers @machines @var_tmp @opt
+Requirements
+Ubuntu 24.04 or newer installed with:
+Root filesystem using Btrfs
+Separate /boot partition formatted as ext4 (1GB)
+(Optional) EFI partition for UEFI systems (1GB)
+Run the ubuntu-btrfs-install script from the Live CD/USB after Ubuntu is installed
+Install Ubuntu with Btrfs
+This guide uses Ubuntu 25.04 as an example.
+
+Step-by-Step Guide
+Preparation
+
+Create a bootable USB drive using the Ubuntu ISO
+Disable Secure Boot in BIOS/UEFI if needed to avoid installation issues
+Start Installation
+
+Boot from the USB drive and select your language
+Choose “Manual installation” (custom partitioning)
+Create Partitions in the Correct Order
+
+Create a new GPT partition table on the disk
+Create the /boot/efi partition:
+Size: 1GB
+Format: FAT32 (vfat)
+Type: EFI System Partition
+Mount point: /boot/efi
+Create the /boot partition:
+Size: 1GB
+Format: ext4
+Mount point: /boot
+Create the root / partition:
+Use all remaining space
+Format: Btrfs
+Mount point: /
+Note: /boot/efi partition don't necessarily need to be created first. The /boot partition can be created first if the installer requires it.
+
+Final Partition Table Should Look Like:
+
+/boot/efi as FAT32 (vfat)
+/boot as ext4
+/ as Btrfs
+Complete Installation
+
+Finish the Ubuntu installation, but DO NOT reboot yet
+How to Use the Script
+⚠️ After installing Ubuntu with Btrfs, do not reboot!
+
+Identify Your Partitions
+Run the following command in the terminal:
+
+lsblk -f
+Look for identifiers like sda, nvme0n1, etc. Example output:
+
+sda     
+├─sda1  vfat   /boot/efi
+├─sda2  ext4   /boot
+└─sda3  btrfs  /
+Download the Script to the Live Session
+cd ~/Downloads
+wget https://raw.githubusercontent.com/diogopessoa/ubuntu-btrfs-install/main/ubuntu-btrfs-install.sh
+Make It Executable
+chmod +x ubuntu-btrfs-install.sh
+Run the Script
+The argument order must be: root → boot → efi
+
+sudo ./ubuntu-btrfs-install.sh sda3 sda2 sda1
+This example is using /dev/sda
+
+Double-check your partition names using lsblk -f
+
+✅ Done!
+You can now reboot before installing Snapper and Btrfs Assistant for automatic snapshots.
+
+💡 Tip: to view Btrfs subvolumes run:
+
+sudo btrfs subvolume list /
+📦 Manual Installation of Snapper and Btrfs Assistant (Post-Installation)
+Snapper is a snapshot manager and Btrfs Assistant is a Snapper GUI.
+
+After rebooting the system, install:
+
+sudo apt update
+sudo apt install -y snapper btrfs-assistant
+Create Snapper root config:
+
+sudo snapper -c root create-config /
+Enable timeline and cleanup timers:
+
+sudo systemctl enable --now snapper-timeline.timer snapper-cleanup.timer
+You can now launch Btrfs Assistant from your application menu or run:
+
+btrfs-assistant
+Automatic Snapshots Configuration
+Now go to "Snapper Settings" tab 🟢 Enable timeline snapshots:
+Hourly save: 10
+Daily save: 10
+Weekly save: 0
+Montthly save: 3
+Yearly save: 1
+Number save: 10
+System unit settings:
+
+🟢 Check "Enable cleanup enabled"
+🟢 Check "Snapper timeline enabled"
+❌ Keep unmarked "Snapper boot"
+With a separate /boot on ext4, enabling Boot Snapshots is not recommended because:
+They will have no real effect.
+They may cause confusion or failures in system restores (since /boot will not be included in Btrfs snapshots).
+Click "Apply systemd changes".
+✅ Done! Your system now has snapshots automatically.
+Screenshots
+Btrfs Assistant "Snapper" Btrfs Assistant Snapper
+
+Btrfs Assistant "Snapper Settings" Btrfs Assistant Snapper Settings
+
+License
+MIT License — View License You can use, modify, and contribute!
+
+Credits
+openSUSE Team — Snapper
+Antynea — grub-btrfs
+Dan Cantrell — Btrfs Assistant
+Ubuntu — Operating System
