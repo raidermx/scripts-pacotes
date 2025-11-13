@@ -1,0 +1,52 @@
+
+grub-btrfs
+git clone https://github.com/Antynea/grub-btrfs
+cd grub-btrfs
+sudo cp 41_snapshots-btrfs /etc/grub.d/
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+
+Instalar e configurar Snapper, grub-btrfs e Timeshift
+Instalar pacotes:
+
+Código
+sudo apt update
+sudo apt install snapper timeshift inotify-tools
+
+
+Configurar Snapper para o volume raiz e possíveis subvolumes:
+
+Código
+sudo snapper -c root create-config /
+# Para home, se desejar
+# sudo snapper -c home create-config /home
+Ajustar /etc/snapper/configs/root conforme retenção e filtros; defina ALLOW_USERS e EXCLUDE_PATTERNS conforme necessário.
+
+Configurar Timeshift: abra Timeshift (GUI) ou use CLI para escolher modo BTRFS, selecionar subvolume @ para snapshots e definir cronogramas. Timeshift em modo BTRFS detecta os subvolumes padrão e funciona bem com grub-btrfs para boot de snapshots.
+
+Integrar com grub-btrfs: habilite o daemon e configure para atualizar o menu GRUB quando snapshots forem criados:
+
+Código
+sudo systemctl enable --now grub-btrfsd
+# Atualizar manualmente:
+sudo grub-btrfs-update
+sudo update-grub
+Se usar Timeshift e quiser que o GRUB mostre snapshots automaticamente, instale inotify-tools e certifique-se que grub-btrfsd esteja ativo; versões recentes usam o daemon para detectar mudanças.
+
+Automação de snapshots durante atualizações (opcional)
+Scripts como timeshift-autosnap-apt podem criar um snapshot antes de operações apt (pre-invoke hook), útil para restaurações rápidas após atualizações problemáticas. Comunidade e guias mostram como integrá‑lo.
+
+Exemplos rápidos de uso e recuperação
+Criar snapshot com Snapper:
+
+Código
+sudo snapper -c root create --description "Antes apt upgrade"
+Listar snapshots:
+
+Código
+sudo snapper -c root list
+Restauração simples (restaurar arquivos ou todo o sistema): Snapper e Timeshift têm opções de rollback; para bootar um snapshot via GRUB, escolha a entrada de snapshot adicionada por grub-btrfs no menu GRUB.
+
+Para remover snapshots antigos:
+
+Código
+sudo snapper -c root delete <ID>
