@@ -7,8 +7,11 @@ apt upgrade
 sudo apt install apturl apturl-common
 
 #essencial
-sudo apt install git aptitude btop htop inxi hardinfo hdparm psensor debsums deborphan smartmontools vrms gnome-system-tools baobab gnome-usage rygel rygel-preferences build-essential dkms
- 
+sudo apt install git aptitude debsums deborphan vrms build-essential dkms
+
+monitor de hardware
+lm-sensors btop htop inxi hardinfo hdparm smartmontools psensor gnome-system-tools baobab gnome-usage stacer mangohud gnome-disk-utility
+
 #configurar gnome
 sudo apt install gnome-software
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
@@ -116,7 +119,9 @@ sudo apt install darktable
 sudo apt install flameshot
 
 #Desenvolvimento científico, matemática e engenharia
-sudo apt install octave; scilab; gnuplot; cantor; scilab already; kalgebra; kmplot; kbruch; klettres; kig; kgeography; parley; klettres;  stellarium 
+sudo apt install octave; scilab; gnuplot; cantor; kalgebra; kmplot; kalzium; kbruch; kturtle; klettres; kig; kgeography; parley; klettres; stellarium; step; 
+flatpak install gbrainy
+flatpak install carmetal
 
 #Contabilidade e finanças pessoais
 sudo apt install gnucash; gnumeric;  
@@ -155,10 +160,11 @@ sudo curl -fsSLo /etc/apt/sources.list.d/brave-browser-release.sources https://b
 sudo apt update
 sudo apt install brave-browser
 
-#jogos
+# Jogos
 sudo apt install steam
 sudo apt install lutris
 sudo apt install games-chess
+sudo apt install tuxmath
 sudo apt install tuxpaint
 sudo apt install aisleriot
 sudo apt install sudoku
@@ -185,23 +191,22 @@ sudo apt install file-roller
 
 ## ferramentas
 (útil para instalações e recovery)
+sudo apt install foremost testdisk photorec
 sudo apt install arch-install-scripts 
 sudo apt install gparted
 sudo apt install gdebi
-sudo apt install stacer gnome-disk-utility gnome-disk-utility btrfs-progs xfsprogs exfatprogs hfsprogs 
+sudo apt install  btrfs-progs xfsprogs exfatprogs hfsprogs 
 sudo apt install bleachbit
 flatpak install flathub io.github.flattool.Warehouse
 
 ##Rede, VPN 
-sudo apt install openvpn network-manager-openvpn-gnome ethtool net-tools
+sudo apt install openvpn network-manager-openvpn-gnome ethtool net-tools 
+##(bonding)
+apt install ifenslave
 sudo apt install cifs-utils samba smbclient
-
 
 ## transferir dados do celular para o computador
 sudo apt install kdeconnect
-
-##(bonding)
-apt install ifenslave
 
 ## gerenciador de downloads
 sudo apt install wget
@@ -236,10 +241,7 @@ sudo apt install virt-manager
 sudo adduser $USER libvirt
 
 # IDEs
-sudo apt install neovim; vim; vim-gtk3; emacs; geany; gedit; codeblocks; jedit; lazarus; scratch; minder
-
-#edição web
-sudo apt install bluefish   
+sudo apt install neovim; vim; vim-gtk3; emacs; geany; gedit; bluefish; codeblocks; jedit; lazarus; scratch; minder   
 
 # terminais, multiplexadores e shells
 sudo ap tinstall tmux; tmate; tilix; mc; terminator; allacrity
@@ -256,7 +258,8 @@ sudo apt install gcal ncal ccal galculator gnome-calculator calculator qalculate
 #mouse 
 sudo apt install piper ratbagd
 
-
+#interface gráfica e ajustes
+nemo caja nautilus redshift xbacklight feh rygel rygel-preferences
 
 
 
