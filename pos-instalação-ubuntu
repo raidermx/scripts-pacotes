@@ -5,8 +5,10 @@ apt upgrade
 
 #instalar com um clique
 sudo apt install apturl apturl-common
-sudo apt install build-essential dkms
 
+#essencial
+sudo apt install git aptitude btop htop inxi hardinfo psensor debsums deborphan smartmontools vrms gnome-system-tools baobab gnome-usage rygel rygel-preferences build-essential dkms
+ 
 #configurar gnome
 sudo apt install gnome-software
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
@@ -32,28 +34,39 @@ sudo apt install flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 sudo apt install gnome-software-plugin-flatpak
 
-# aplicativos
-sudo apt install ubuntu-restricted-extras
+# players de áudio
 sudo apt install audacious libqt6svg6
 sudo apt install vlc
+sudo apt install mpv
 sudo apt install smplayer
 sudo apt install kodi
 sudo snap install spotify
+
+# música e produção de áudio
 sudo apt install audacity
-sudo apt install blender
-sudo apt install gimp
-sudo apt install handbrake
-sudo apt install inkscape
+sudo apt install ardour
+sudo apt install lmms
+sudo apt install hydrogen
+sudo apt install mixxx
+sudo apt install musescore
+sudo apt install qtractor
+
+# edição e produção de vídeo
 sudo apt install kdenlive
-sudo apt install krita krita-l10n
 sudo apt install obs-studio
 sudo apt install openshot-qt
-sudo apt install rawtherapee
-sudo apt install digikam
-sudo apt install darktable
 sudo apt install shotcut
-sudo apt install mpv
+sudo apt install handbrake
+sudo apt install pitivi
+sudo apt install webcamoid
+sudo apt install cheese
+sudo apt install guvcview
+wudo apt install winff
+sudo apt install mplayer
+
+
 #codecs, fontes e temas
+sudo apt install ubuntu-restricted-extras
 sudo apt install faad ffmpeg gstreamer1.0-libav gstreamer1.0-vaapi gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly lame libavcodec-extra libavcodec-extra59 libavdevice59 libgstreamer1.0-0 sox twolame vorbis-tools
 sudo apt install ttf-mscorefonts-installer
 sudo apt install fonts-hack-ttf 
@@ -61,13 +74,34 @@ sudo apt install glib2-devel ImageMagick
 sudo apt install materia-gtk-theme deepin-icon-theme paper-icon-theme 
 sudo apt install libreoffice-l10n-pt-br libreoffice-style-breeze libreoffice-style-colibre libreoffice-style-elementary libreoffice-style-hicontrast libreoffice-style-sifr 
 
-#CAD
+#CAD - programas de desenho assistido pelo computador
 sudo apt install librecad
 sudo apt install leocad
+sudo apt install openscad
+sudo apt install solvespace
+sudo apt install synfigstudio
+sudo apt install pencil2d
+sudo apt install blender
 
+##frecad
 sudo add-apt-repository ppa:freecad-maintainers/freecad-stable
 sudo apt update
 sudo apt install freecad freecad-doc
+
+#design gráfico, pintura e tipografia
+sudo apt install mypaint
+sudo apt install kolourpaint
+sudo apt install gimp
+sudo apt install inkscape
+sudo apt install krita krita-l10n
+sudo apt install akira
+sudo apt install feh
+sudo apt install shotwell
+sudo apt install ristretto
+sudo apt install rawtherapee
+sudo apt install digikam
+sudo apt install darktable
+
 
 # comunicação
 cd /tmp && wget -O discord.deb 'https://discord.com/api/download?platform=linux&format=deb'
@@ -97,7 +131,14 @@ sudo apt install brave-browser
 #jogos
 sudo apt install steam
 sudo apt install lutris
+sudo apt install games-chess
+sudo apt install tuxpaint
+sudo apt install aisleriot
+sudo apt install sudoku
+sudo apt install blinken
+sudo apt install kpat
 
+#emuladores
 flatpak install flathub org.DolphinEmu.dolphin-emu
 flatpak install flathub io.github.lime3ds.Lime3DS
 flatpak install flathub org.flycast.Flycast
@@ -109,13 +150,31 @@ flatpak install flathub app.xemu.xemu
 flatpak install flathub org.ryujinx.Ryujinx
 
 # utilitários
+
+## compactação de arquivos
 sudo apt install arc arj cabextract lhasa p7zip p7zip-full p7zip-rar rar unrar unace unzip xz-utils zip
+sudo apt install ark
+sudo apt install file-roller
+
+## ferramentas
+sudo apt install gparted
 sudo apt install gdebi
 sudo apt install stacer
+
 flatpak install flathub io.github.flattool.Warehouse
+
+## gerenciador de downloads
 sudo apt install uget
 sudo apt install qbittorrent
-sudo apt install gparted
+sudo apt install transmission-gtk
+
+
+
+#pdf
+sudo apt install qpdf
+sudo apt install masterpdf
+sudo apt install evince
+sudo apt install atril
 
 # anydesk
 cd /tmp && wget -qO- https://keys.anydesk.com/repos/DEB-GPG-KEY | sudo gpg --dearmour -o /etc/apt/trusted.gpg.d/anydesk.gpg && cd $HOME
