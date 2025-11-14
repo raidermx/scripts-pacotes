@@ -1,30 +1,38 @@
+
+#Atualizar
 apt update
 apt upgrade
+
+#instalar com um clique
 sudo apt install apturl apturl-common
 sudo apt install build-essential dkms
 
+#configurar gnome
 sudo apt install gnome-software
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
 sudo apt install gnome-tweaks
 
+#firewall
 apt install ufw gufw
 sudo ufw enable
 
+#otimizar memória
 sudo nano /etc/sysctl.conf
 vm.swappiness=10
 vm.vfs_cache_pressure=50
 vm.dirty_background_bytes=16777216 
 vm.dirty_bytes=50331648 
 
-
-
+# melhorar consumo da bateria do notebook
 sudo apt install tlp tlp-rdw
 sudo systemctl enable tlp.service && sudo tlp start
 
+# flatpak
 sudo apt install flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 sudo apt install gnome-software-plugin-flatpak
 
+# aplicativos
 sudo apt install ubuntu-restricted-extras
 sudo apt install audacious libqt6svg6
 sudo apt install vlc
@@ -45,7 +53,7 @@ sudo apt install digikam
 sudo apt install darktable
 sudo apt install shotcut
 sudo apt install mpv
-
+#codecs, fontes e temas
 sudo apt install faad ffmpeg gstreamer1.0-libav gstreamer1.0-vaapi gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly lame libavcodec-extra libavcodec-extra59 libavdevice59 libgstreamer1.0-0 sox twolame vorbis-tools
 sudo apt install ttf-mscorefonts-installer
 sudo apt install fonts-hack-ttf 
@@ -53,6 +61,7 @@ sudo apt install glib2-devel ImageMagick
 sudo apt install materia-gtk-theme deepin-icon-theme paper-icon-theme 
 sudo apt install libreoffice-l10n-pt-br libreoffice-style-breeze libreoffice-style-colibre libreoffice-style-elementary libreoffice-style-hicontrast libreoffice-style-sifr 
 
+#CAD
 sudo apt install librecad
 sudo apt install leocad
 
@@ -60,19 +69,32 @@ sudo add-apt-repository ppa:freecad-maintainers/freecad-stable
 sudo apt update
 sudo apt install freecad freecad-doc
 
+# comunicação
 cd /tmp && wget -O discord.deb 'https://discord.com/api/download?platform=linux&format=deb'
 sudo apt install ./discord.deb && cd $HOME
 
 snap install telegram-desktop
 
+# navegadores
+
+## google chrome
 cd /tmp && wget -O google-chrome-stable.deb 'https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb'
 sudo apt install ./google-chrome-stable.deb && cd $HOME
 
+## microsoft edge
 echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge/ stable main" | sudo tee /etc/apt/sources.list.d/microsoft-edge.list
 sudo apt install curl
 cd /tmp && curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg && sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/ && cd $HOME
 sudo apt update && sudo apt install microsoft-edge-stable
 
+## brave browser
+sudo apt install curl
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+sudo curl -fsSLo /etc/apt/sources.list.d/brave-browser-release.sources https://brave-browser-apt-release.s3.brave.com/brave-browser.sources
+sudo apt update
+sudo apt install brave-browser
+
+#jogos
 sudo apt install steam
 sudo apt install lutris
 
@@ -86,17 +108,16 @@ flatpak install flathub io.mgba.mGBA
 flatpak install flathub app.xemu.xemu
 flatpak install flathub org.ryujinx.Ryujinx
 
-
+# utilitários
 sudo apt install arc arj cabextract lhasa p7zip p7zip-full p7zip-rar rar unrar unace unzip xz-utils zip
 sudo apt install gdebi
 sudo apt install stacer
 flatpak install flathub io.github.flattool.Warehouse
-
-
 sudo apt install uget
 sudo apt install qbittorrent
 sudo apt install gparted
 
+# anydesk
 cd /tmp && wget -qO- https://keys.anydesk.com/repos/DEB-GPG-KEY | sudo gpg --dearmour -o /etc/apt/trusted.gpg.d/anydesk.gpg && cd $HOME
 echo "deb http://deb.anydesk.com/ all main" | sudo tee /etc/apt/sources.list.d/anydesk-stable.list
 sudo apt update && sudo apt install anydesk
