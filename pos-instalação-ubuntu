@@ -7,10 +7,10 @@ apt upgrade
 sudo apt install apturl apturl-common
 
 #essencial
-sudo apt install git aptitude debsums deborphan vrms build-essential dkms
+sudo apt install git cmatrix neofetch aptitude cups debsums deborphan vrms build-essential dkms
 
 monitor de hardware
-lm-sensors btop htop inxi hardinfo hdparm smartmontools psensor gnome-system-tools baobab gnome-usage stacer mangohud gnome-disk-utility
+cpu-x lm-sensors btop htop inxi hardinfo hdparm smartmontools psensor gnome-system-tools baobab gnome-usage stacer mangohud gnome-disk-utility
 
 #configurar gnome
 sudo apt install gnome-software
@@ -232,9 +232,6 @@ echo "deb http://deb.anydesk.com/ all main" | sudo tee /etc/apt/sources.list.d/a
 sudo apt update && sudo apt install anydesk
 sudo apt install synaptic
 
-sudo apt install git neovim vim vim-gtk3 aptitude neofetch cmatrix aria2 tmux tmate ncal ccal gcal calc  links2 debsums deborphan htop hdparm vim timeshift akira gimp inkscape blender scribus krita krita-l10n kodi vlc flameshot darktable digikam mypaint kolourpaint rawtherapee librecad freecad leocad solvespace synfigstudio openscad pencil2d octave scilab kruler ardour audacious kdenlive lmms mixxx musescore clementine ark  filezilla qbittorrent uget tlp tlp-rdw  cheese guvcview handbrake hydrogen mpv pitivi qtractor smplayer k3b brasero bluefish codeblocks emacs geany minder scratch carmetal geogebra kicad electric stellarium gnucash gnumeric calibre planner dia gedit cherrytree seahorse keepassxc 
-
-sudo apt install ethtool stacer bleachbit kdeconnect caja cpu-x cups vim vim-gtk3 aptitude neofetch cmatrix aria2 tmux tmate ncal ccal gcal calendar calc  links2 debsums deborphan htop hdparm vim timeshift gimp inkscape blender scribus krita kodi vlc flameshot darktable digikam mypaint kolourpaint rawtherapee librecad freecad leocad solvespace synfigstudio openscad pencil2d octave scilab kruler ardour audacity audacious kdenlive lmms mixxx musescore clementine shotcut ark  filezilla qbittorrent uget tlp tlp-rdw okular cheese guvcview handbrake hydrogen mpv pitivi qtractor smplayer k3b brasero bluefish codeblocks emacs geany jedit minder scratch carmetal geogebra kicad electric stellarium tuxmath gnucash gnumeric calibre planner dia gedit cherrytree seahorse keepassxc focuswriter gnome-calculator thunderbird pidgin obs-studio gpm rygel rygel-preferences psensor smartmontools vrms inxi hardinfo gparted tilix gnuplot ifenslave gnome-system-tools openvpn network-manager-openvpn-gnome gnome-disk-utility gnome-usage  baobab shotwell mangohud arch-install-scripts pdfarranger ristretto fonts-liberation  evince xournal openshot-qt gajim revolt ratbagd piper games-chess kpat qgis abiword qpdf btrfs-progs xfsprogs exfatprogs hfsprogs lazarus mc cantor blinken kgeography kig klettres kmplot kalgebra kalzium kbruch kturtle parley tuxpaint step aisleriot sudoku galculator nemo openboard winff redshift xbacklight feh mplayer webcamoid transmission-gtk samba smbclient cifs-utils
 
 ## virtualização
 sudo apt install virt-manager
