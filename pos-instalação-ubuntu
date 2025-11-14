@@ -159,7 +159,7 @@ sudo apt install file-roller
 ## ferramentas
 sudo apt install gparted
 sudo apt install gdebi
-sudo apt install stacer
+sudo apt install stacer gnome-disk-utility gnome-disk-utility btrfs-progs xfsprogs exfatprogs hfsprogs cifs-utils samba smbclient
 
 flatpak install flathub io.github.flattool.Warehouse
 
@@ -167,6 +167,8 @@ flatpak install flathub io.github.flattool.Warehouse
 sudo apt install uget
 sudo apt install qbittorrent
 sudo apt install transmission-gtk
+sudo apt install filezilla
+
 
 
 
