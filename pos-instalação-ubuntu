@@ -102,13 +102,21 @@ sudo apt install rawtherapee
 sudo apt install digikam
 sudo apt install darktable
 
+Desenvolvimento científico, matemática e engenharia
+octave; scilab; gnucash (financeiro); gnuplot; cantor; scilab already; kalgebra; kmplot; kbruch; klettres; kig; kgeography; parley; klettres and educational tools grouped; stellarium (astronomia)
+Contabilidade e finanças pessoais
+gnucash; gnumeric; calibre (gestor de ebooks, encaixa em produtividade)
+
+Mapas, GIS e educação
+qgis; kgeography;
+
 
 # comunicação
 cd /tmp && wget -O discord.deb 'https://discord.com/api/download?platform=linux&format=deb'
 sudo apt install ./discord.deb && cd $HOME
 
 snap install telegram-desktop
-
+thunderbird; pidgin; gajim; revolt;
 # navegadores
 
 ## google chrome
@@ -157,6 +165,7 @@ sudo apt install ark
 sudo apt install file-roller
 
 ## ferramentas
+arch-install-scripts (útil para instalações e recovery)
 sudo apt install gparted
 sudo apt install gdebi
 sudo apt install stacer gnome-disk-utility gnome-disk-utility btrfs-progs xfsprogs exfatprogs hfsprogs cifs-utils samba smbclient
@@ -193,11 +202,19 @@ sudo apt install virt-manager
 sudo adduser $USER libvirt
 
 
+# IDEs
+neovim; vim; vim-gtk3; emacs; geany; gedit; codeblocks; jedit; lazarus; scratch; minder;
+Browsers e web/edição web
+bluefish; geany/gedit can be used for web; links2 (console browser)
 
+# terminais, multiplexadores e shells
+tmux; tmate; tilix; mc
 
+Segurança, encriptação e chaves
+seahorse; keepassxc
 
-
-
+Produtividade, escrita e organização
+libreoffice not in list; abiword; focuswriter; planner; cherrytree; pdfarranger; xournal; evince; gcal; ncal; ccal; galculator; gnome-calculator; calculator apps (calc; galculator; gnome-calculator)
 
 
 
