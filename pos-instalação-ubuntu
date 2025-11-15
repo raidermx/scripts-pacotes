@@ -83,7 +83,7 @@ make install TAGS=davinci_resolve
 
 #codecs, fontes e temas
 sudo apt install ubuntu-restricted-extras
-sudo apt install faad ffmpeg gstreamer1.0-libav gstreamer1.0-vaapi gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly lame libavcodec-extra libavcodec-extra59 libavdevice59 libgstreamer1.0-0 sox twolame vorbis-tools
+sudo apt install faad ffmpeg gstreamer1.0-libav gstreamer1.0-vaapi gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly lame libavcodec-extra libgstreamer1.0-0 sox twolame vorbis-tools
 sudo apt install ttf-mscorefonts-installer
 sudo apt install fonts-hack-ttf 
 sudo apt install glib2-devel ImageMagick
