@@ -244,7 +244,7 @@ sudo adduser $USER libvirt
 sudo apt install neovim; vim; vim-gtk3; emacs; geany; gedit; bluefish; codeblocks; jedit; lazarus; scratch; minder   
 
 # terminais, multiplexadores e shells
-sudo ap tinstall tmux; tmate; tilix; mc; terminator; allacrity
+sudo apt install tmux; tmate; tilix; mc; terminator; allacrity; fish; zsh
 
 #Segurança, encriptação e chaves
 apt install seahorse keepassxc openssh-server
