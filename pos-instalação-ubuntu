@@ -253,7 +253,7 @@ apt install seahorse keepassxc openssh-server
 sudo apt install abiword focuswriter planner cherrytree xournal calibre openboard dia
 
 #Calculadoras
-sudo apt install gcal ncal ccal galculator gnome-calculator calculator qalculate-qt
+sudo apt install gcal ncal ccal galculator gnome-calculator qalculate-gtk
 
 #mouse 
 sudo apt install piper ratbagd
