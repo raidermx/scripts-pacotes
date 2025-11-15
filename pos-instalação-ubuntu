@@ -3,24 +3,6 @@
 apt update
 apt upgrade
 
-#instalar com um clique
-sudo apt install apturl apturl-common
-
-#essencial
-sudo apt install git cmatrix neofetch aptitude cups debsums deborphan vrms build-essential dkms
-
-monitor de hardware
-cpu-x lm-sensors btop htop inxi hardinfo hdparm smartmontools psensor gnome-system-tools baobab gnome-usage stacer mangohud gnome-disk-utility
-
-#configurar gnome
-sudo apt install gnome-software
-gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
-sudo apt install gnome-tweaks
-
-#firewall
-apt install ufw gufw
-sudo ufw enable
-
 #otimizar memória
 sudo nano /etc/sysctl.conf
 vm.swappiness=10
@@ -31,6 +13,26 @@ vm.dirty_bytes=50331648
 # melhorar consumo da bateria do notebook
 sudo apt install tlp tlp-rdw
 sudo systemctl enable tlp.service && sudo tlp start
+
+
+#instalar com um clique
+sudo apt install apturl apturl-common
+
+#essencial
+sudo apt install git cmatrix neofetch aptitude cups debsums deborphan vrms build-essential dkms
+
+monitor de hardware
+sudo apt install cpu-x lm-sensors btop htop inxi hardinfo hdparm smartmontools psensor gnome-system-tools baobab gnome-usage stacer mangohud gnome-disk-utility
+
+#configurar gnome
+sudo apt install gnome-software
+gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
+sudo apt install gnome-tweaks
+
+#firewall
+apt install ufw gufw
+sudo ufw enable
+
 
 # flatpak
 sudo apt install flatpak
