@@ -60,7 +60,7 @@ sudo apt install musescore
 sudo apt install qtractor
 
 Impressão, gravação e gestão de mídia óptica
-sudo apt install k3b; brasero
+sudo apt install k3b; brasero; gnome-multi-writer; rpi-imager
 
 # edição e produção de vídeo
 sudo apt install kdenlive
