@@ -1,0 +1,8 @@
+
+
+Diodon está funcionando que é uma maravilha para mim. (Linux Mint Cinammon)
+
+Basta instalar o diodon usando "apt install diodon"
+
+depois procure atalhos no menu de aplicativos e adicione o atalho para "/usr/bin/diodon" para a tecla win + v.
+

@@ -1,0 +1,6 @@
+Go to /usr/share/application
+Find a shortcut to Opera. In mc (as well as doublecmd) it will be called "Opera.desktop".
+Open this shortcut in a text editor with administrator privileges.
+In the "Exec" line, replace "opera %U" with "opera --lang=Your_Language %U", where "Your_Language" is your language, e.g. "pl" for Polish.
+Complete the "Exec" lines in the other sections as appropriate.
+You will have to repeat it after every update 😞
