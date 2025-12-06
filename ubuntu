@@ -57,20 +57,44 @@ gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
 
 
 #utilitários
-sudo apt install audacity audacious bleachbit caffeine calibre cheese  handbrake imagemagick kdeconnect obs-studio okular remmina vlc rhythmbox shotwell shutter timeshift transmission uget winff qbittorrent qalculate-qt speedcrunch screenruler showtime
+sudo apt install -y \
+audacity \
+audacious \
+bleachbit \
+caffeine \
+calibre \
+cheese \
+handbrake \
+imagemagick \
+kdeconnect \
+obs-studio \
+okular \
+remmina \
+vlc \
+rhythmbox \
+shotwell \
+shutter \
+timeshift \
+transmission \
+uget \
+winff \
+qbittorrent \
+qalculate-qt \
+speedcrunch \
+screenruler \
+showtime
 
 #compactação de arquivos
 sudo apt install arc arj cabextract lhasa p7zip p7zip-full p7zip-rar rar unrar unar unace unzip xz-utils zip
 
 # gráficos e jogos
-sudo apt install freecad gimp krita drawing darktable digikam inkscape blender kdenlive steam
+sudo apt install freecad gimp krita drawing darktable digikam inkscape blender kdenlive steam steam-devices joystick jstest-gtk qjoypad antimicrox
 
-#flatpak
-sudo apt install flatpak
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
 
 snap install telegram-desktop
 snap install spotify --classic
+snap install onlyoffice-desktopeditors
 
 only office
 https://www.onlyoffice.com/pt/download-desktop
@@ -96,3 +120,8 @@ https://www.microsoft.com/pt-br/edge/download?form=MA13FJ
 
 brave
 curl -fsS https://dl.brave.com/install.sh | sh
+
+---------------------------------------------------------------------------------------------------
+#flatpak
+sudo apt install flatpak
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
