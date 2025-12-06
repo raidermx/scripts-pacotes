@@ -87,11 +87,14 @@ showtime
 #compactação de arquivos
 sudo apt install arc arj cabextract lhasa p7zip p7zip-full p7zip-rar rar unrar unar unace unzip xz-utils zip
 
-# gráficos e jogos
-sudo apt install freecad gimp krita drawing darktable digikam inkscape blender kdenlive steam steam-devices joystick jstest-gtk qjoypad antimicrox
+# gráficos 
+sudo apt install freecad gimp krita drawing darktable digikam inkscape blender kdenlive 
+
+# jogos
+sudo apt install steam steam-devices joystick jstest-gtk qjoypad antimicrox
 
 
-
+# snaps
 snap install telegram-desktop
 snap install spotify --classic
 snap install onlyoffice-desktopeditors
