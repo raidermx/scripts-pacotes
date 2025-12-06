@@ -45,29 +45,17 @@ gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
 
 
 #utilitários
-sudo apt install audacity audacious bleachbit caffeine calibre cheese drawing darktable digikam gparted handbrake htop imagemagick kdeconnect obs-studio okular remmina vlc rhythmbox shotwell shutter timeshift transmission uget vim wpagui hardinfo cpu-x gnome-tweaks winff qbittorrent qalculate-qt speedcrunch screenruler 
+sudo apt install audacity audacious bleachbit caffeine calibre cheese  gparted handbrake htop imagemagick kdeconnect obs-studio okular remmina vlc rhythmbox shotwell shutter timeshift transmission uget vim wpagui hardinfo cpu-x gnome-tweaks winff qbittorrent qalculate-qt speedcrunch screenruler 
 
 #compactação de arquivos
 sudo apt install arc arj cabextract lhasa p7zip p7zip-full p7zip-rar rar unrar unar unace unzip xz-utils zip
 
-
+# gráficos e jogos
+sudo apt install freecad gimp krita drawing darktable digikam inkscape blender kdenlive steam
 
 #flatpak
 sudo apt install flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install spotify
-flatpak install simplenote
-flatpak install telegram
-flatpak install steam
-flatpak install PeaZip
-flatpak install freecad
-flatpak install gimp
-flatpak install krita
-flatpak install inkscape
-flatpak install blender
-flatpak install kdenlive
-flatpak install onlyoffice
-
 
 only office
 https://www.onlyoffice.com/pt/download-desktop
