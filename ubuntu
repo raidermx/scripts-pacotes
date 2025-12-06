@@ -10,11 +10,23 @@ habilitar uefi
 #pós instalação
 sudo apt update && sudo apt upgrade
 
-sudo apt install curl wget apt-transport-https dirmngr gdebi
+#Ativar preload (carregamento inteligente de apps)
+sudo apt install preload
+systemctl enable preload
+systemctl start preload
+
+# adds gnome
+sudo apt install gnome-shell-extensions gnome-tweaks gnome-sushi 
+
+# folder color
+sudo add-apt-repository ppa:costales/folder-color
+sudo apt install folder-color folder-color-common
+
+# sistema
+sudo apt install build-essential cmake yasm nasm curl wget gparted apt-transport-https dirmngr gdebi git vim neovim aria2 htop btop wpagui hardinfo cpu-x smartmontools
 sudo apt install ubuntu-restricted-extras
 sudo apt install gufw
 sudo ufw enable
-
 
 #melhorar consumo de energia da bateria
 sudo apt install tlp tlp-rdw
@@ -45,7 +57,7 @@ gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
 
 
 #utilitários
-sudo apt install audacity audacious bleachbit caffeine calibre cheese  gparted handbrake htop imagemagick kdeconnect obs-studio okular remmina vlc rhythmbox shotwell shutter timeshift transmission uget vim wpagui hardinfo cpu-x gnome-tweaks winff qbittorrent qalculate-qt speedcrunch screenruler 
+sudo apt install audacity audacious bleachbit caffeine calibre cheese  handbrake imagemagick kdeconnect obs-studio okular remmina vlc rhythmbox shotwell shutter timeshift transmission uget winff qbittorrent qalculate-qt speedcrunch screenruler showtime
 
 #compactação de arquivos
 sudo apt install arc arj cabextract lhasa p7zip p7zip-full p7zip-rar rar unrar unar unace unzip xz-utils zip
@@ -56,6 +68,9 @@ sudo apt install freecad gimp krita drawing darktable digikam inkscape blender k
 #flatpak
 sudo apt install flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+snap install telegram-desktop
+snap install spotify --classic
 
 only office
 https://www.onlyoffice.com/pt/download-desktop
