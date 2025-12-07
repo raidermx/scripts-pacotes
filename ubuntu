@@ -128,3 +128,31 @@ curl -fsS https://dl.brave.com/install.sh | sh
 #flatpak
 sudo apt install flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+----------------------------------------------------------------------------------------------------
+
+pop-shell
+sudo apt install git node-typescript make gnome-shell-extension-prefs
+git clone https://github.com/pop-os/shell.git
+cd shell
+make local-install
+sudo glib-compile-schemas /usr/share/glib-2.0/schemas/
+habilitar themes e tiling no https://extensions.gnome.org/
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+dev
+sudo apt install build-essential default-jdk libssl-dev exuberant-ctags ncurses-term ack-grep silversearcher-ag fontconfig imagemagick libmagickwand-dev software-properties-common git vim-gtk3 curl tilix tmux tmate
+
+------------------------------------------------------------------------------------------------------------------------------------------
+banco de dados
+sudo apt install postgresql-17 postgresql-contrib postgresql-server-dev-17 redis-server libhiredis-dev memcached libmemcached-dev 
+
+
+
+
+
+
+
+
+
+
+
