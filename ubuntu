@@ -43,10 +43,7 @@ sudo apt install lm-sensors psensor fancontrol powertop
 sudo sensors-detect
 
 #aceleração de vídeo intel  
-sudo apt install intel-media-va-driver i965-va-driver
-
-#instalar aplicativos com 1 click
-sudo apt install apturl apturl-common
+sudo apt install intel-media-va-driver i965-va-driver  i965-va-driver-shaders
 
 #minimizar clicando sobre os ícones
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
