@@ -2,9 +2,9 @@
 desabilitar secure boot
 desabilitar fast boot
 habilitar uefi
-/boot 2GB
-/boot/efi
-/ 128GB
+/boot 2GB  2048 MB
+/boot/efi 500GB 524288 MB
+/ 128GB  131072 MB
 /home resto do disco
 
 #pós instalação
