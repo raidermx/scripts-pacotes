@@ -18,10 +18,6 @@ systemctl start preload
 # adds gnome
 sudo apt install gnome-shell-extensions gnome-tweaks gnome-sushi 
 
-# folder color
-sudo add-apt-repository ppa:costales/folder-color
-sudo apt install folder-color folder-color-common
-
 # sistema
 sudo apt install build-essential cmake yasm nasm curl wget gparted apt-transport-https dirmngr gdebi git vim neovim aria2 htop btop wpagui hardinfo cpu-x smartmontools
 sudo apt install ubuntu-restricted-extras
