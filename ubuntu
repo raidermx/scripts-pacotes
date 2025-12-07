@@ -146,8 +146,11 @@ sudo apt install build-essential default-jdk libssl-dev exuberant-ctags ncurses-
 banco de dados
 sudo apt install postgresql-17 postgresql-contrib postgresql-server-dev-17 redis-server libhiredis-dev memcached libmemcached-dev 
 
+-------------------------------------------------------------------------------------------------------------------------------------------
+asdf
 
-
+apt-get install dirmngr gpg curl gawk
+asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 
 
 
