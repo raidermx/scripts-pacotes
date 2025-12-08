@@ -141,7 +141,7 @@ habilitar themes e tiling no https://extensions.gnome.org/
 
 dev
 sudo apt install build-essential default-jdk libssl-dev exuberant-ctags ncurses-term ack-grep silversearcher-ag fontconfig imagemagick libmagickwand-dev software-properties-common git vim-gtk3 curl tilix tmux tmate
-
+sudo apt install autoconf m4 libwxgtk3.2-dev libwxgtk-webview3.2-dev libgl1-mesa-dev libglu1-mesa-dev libpng-dev libssh-dev unixodbc-dev xsltproc fop libxml2-utils libncurses-dev
 ------------------------------------------------------------------------------------------------------------------------------------------
 banco de dados
 sudo apt install postgresql-17 postgresql-contrib postgresql-server-dev-17 redis-server libhiredis-dev memcached libmemcached-dev 
