@@ -150,16 +150,16 @@ sudo apt install postgresql-17 postgresql-contrib postgresql-server-dev-17 redis
 asdf
 
 apt-get install dirmngr gpg curl gawk
-asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+
 asdf - gerenciador de versões de linguagens de progamação
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.18.0
-
 echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.bashrc
 echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
+reboot
 
 asdf plugin-update --all # update the individual plugins
 asdf list-all [language] # to list all available versions
-
+asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 asdf plugin add ruby https://github.com/asdf-vm/asdf-ruby.git
 asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
