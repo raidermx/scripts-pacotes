@@ -1,0 +1,24 @@
+habilitar o trim no linux
+sudo fstrim -v /
+
+Você deve ver uma saída, parecida com isso:
+
+/: 81,3 GiB (87308992512 bytes) descartado
+
+Se tudo correu bem, é hora de programar o cron para executar o fstrim uma vez por dia, para isso, crie um arquivo com esse comando:
+
+sudo vim /etc/cron.daily/trim
+
+Copie e cole as linhas abaixo no arquivo criado e salve-o:
+
+#!/bin/sh
+LOG=/var/log/trim.log
+echo "*** $(date -R) ***" >> $LOG
+fstrim -v / >> $LOG
+fstrim -v /home >> $LOG 
+
+Agora torne o script executável com o comando abaixo:
+
+sudo chmod +x /etc/cron.daily/trim
+
+Pronto. Agora seu sistema está com o TRIM habilitado.
